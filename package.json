@@ -1,0 +1,21 @@
+{
+  "name": "quizly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:client":"cd packages/frontend/client && npm run dev",
+    "dev:admin":"cd packages/frontend/admin-dashboard && npm run dev",
+    "dev:backend":"cd packages/backend && npm run dev",
+    "build:client":"cd packages/frontend/client && npm run build",
+    "build:admin":"cd packages/frontend/admin-dashboard && npm run build",
+    "build:backend":"cd packages/backend && npm run build",
+    "dev":"concurrently \"npm run dev:client\" \"npm run dev:admin\" \"npm run dev:backend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
