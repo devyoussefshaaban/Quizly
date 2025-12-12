@@ -1,7 +1,7 @@
 // Components
 import LoginForm from "../../components/LoginForm/LoginForm";
 // Styles
-import "./LoginPageStyle.scss";
+import "./index.scss";
 
 const LoginPage = () => {
   return (

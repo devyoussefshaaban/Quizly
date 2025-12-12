@@ -1,7 +1,7 @@
 // modules & hooks
 import { Link } from "react-router-dom";
 // styles
-import "./RedirectedMessage.scss";
+import "./index.scss";
 // props
 interface Props {
   message: string;

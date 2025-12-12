@@ -1,0 +1,38 @@
+.result__screen {
+    display: grid;
+    place-items: center;
+
+    .result__container {
+        .result__answers {
+            display: flex;
+            align-items: center;
+
+            &>div {
+                font-size: 1.5rem;
+                padding: 1rem;
+                border-radius: 5px;
+                text-align: center;
+                color: #fff;
+
+                &.right__answers {
+                    margin-right: 2rem;
+                    background: #080;
+                }
+
+                &.wrong__answers {
+                    background: #f00;
+                }
+            }
+        }
+
+        .result__percentage {
+            color: #fff;
+            font-size: 2rem;
+            background: #3498db;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+    }
+}

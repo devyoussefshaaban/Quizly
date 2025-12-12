@@ -1,0 +1,38 @@
+.questions__list {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+
+    .question__number {
+        width: 50px;
+        height: 50px;
+        padding: 1rem;
+        font-size: 1.2rem;
+        border-radius: 50%;
+        margin: 4rem auto 0;
+        text-align: center;
+        color: #fff;
+        font-weight: 600;
+        background: #3498db;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        padding: 1rem;
+        border-radius: 5px;
+        background: #3498db;
+
+        &:first-child {
+            margin-right: 1rem;
+        }
+
+        a {
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    }
+}

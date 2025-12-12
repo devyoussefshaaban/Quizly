@@ -6,6 +6,8 @@ import "./App.scss";
 import { useSelector } from "react-redux";
 import type { RootState } from "./context";
 import LoginPage from "./pages/LoginPage";
+import ExamPage from "./pages/ExamPage";
+import ResultPage from "./pages/ResultPage";
 
 const App = () => {
   const isAuth = useSelector((state: RootState) => state.main.userAuth);
@@ -19,6 +21,8 @@ const App = () => {
         )}
         <Routes>
           <Route path="/" element={<LoginPage />} />
+          <Route path="/exam" element={<ExamPage />} />
+          <Route path="/result" element={<ResultPage />} />
         </Routes>
       </div>
     </Router>

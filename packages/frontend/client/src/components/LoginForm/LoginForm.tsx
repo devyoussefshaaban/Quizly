@@ -5,7 +5,7 @@ import type { RootState } from "../../context";
 import { login, logout, userAuth } from "../../context/actions";
 import { useNavigate } from "react-router-dom";
 // components
-import RedirectMessage from "../RedirectedMessage/RedirectedMessage";
+import RedirectMessage from "../RedirectedMessage";
 // styles
 import "./LoginForm.scss";
 
@@ -89,7 +89,7 @@ const LoginForm = () => {
         <label htmlFor="password">Password</label>
         <input
           type="password"
-          id="name"
+          id="password"
           {...register("password", {
             required: true,
             minLength: 8,
