@@ -1,24 +1,25 @@
 import MenuIcon from "../../assets/icons/menu-icon.svg";
 import CloseIcon from "../../assets/icons/close-icon.svg";
 import { useState } from "react";
-import logo from "../../assets/images/logo.png"
-
-import "./Header.scss";
+import Logo from "../../assets/images/logo.svg"
 import Nav from "../Nav";
 import { Link } from "react-router-dom";
+
+import "./index.scss";
+
 
 const Header = () => {
   const [activeNav, setActiveNav] = useState(false);
 
-  // toggle nav
   const toggleNav = () => {
     setActiveNav((ps) => !ps);
   };
+
   return (
     <header>
       <div className="header__logo">
         <Link to="/">
-          <img src={logo} alt="Quizzly Logo" />
+          <img src={Logo} alt="Quizly Logo" style={{ width: "200px", height: "200px", objectFit: "contain" }} />
         </Link>
       </div>
 

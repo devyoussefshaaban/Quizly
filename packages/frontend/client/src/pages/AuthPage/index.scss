@@ -1,0 +1,44 @@
+@use '../../sass' as sass;
+
+.login__screen {
+    overflow: hidden;
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .grid__item {
+            height: 100vh;
+
+            &.logo__container {
+                background-image: url("../../assets//images/bg.png");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                display: grid;
+
+                place-items: center;
+
+                img {
+                    width: 300px;
+                    height: auto;
+                }
+            }
+
+            &.form__container {
+                background-color: sass.$white;
+
+                form {
+                    width: 50%;
+                    height: 100%;
+                    margin: auto;
+                    border-radius: none;
+                    background-color: sass.$white;
+
+                }
+            }
+        }
+    }
+
+}

@@ -25,13 +25,6 @@
             filter: blur(4px);
         }
     }
-
-    &>div {
-        flex: 1;
-        padding: 1rem;
-        opacity: 0;
-        animation: fadeIn .5s ease forwards;
-    }
 }
 
 

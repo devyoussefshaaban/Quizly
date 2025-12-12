@@ -1,7 +1,7 @@
 // Components
 import LoginForm from "../../components/LoginForm/LoginForm";
 import MetaHead from "../../components/shared/MetaHead";
-// Styles
+import Logo from "../../assets/images/logo.svg"
 import "./index.scss";
 
 const LoginPage = () => {
@@ -9,7 +9,14 @@ const LoginPage = () => {
     <>
       <MetaHead title="Login" description="Login page description." />
       <div className="login__screen">
-        <LoginForm />
+        <div className="grid">
+          <div className="grid__item logo__container">
+            <img src={Logo} alt="Quizzly Logo" />
+          </div>
+          <div className="grid__item form__container">
+            <LoginForm />
+          </div>
+        </div>
       </div>
     </>
   );
