@@ -31,7 +31,7 @@ const LoginForm = () => {
     // calling api simulation for user auth
     setTimeout(() => {
       dispatch(login(data));
-      navigate("/exam");
+      navigate("/quiz");
       dispatch(userAuth(true));
       reset({ name: null, email: null, password: null });
     }, 1000);

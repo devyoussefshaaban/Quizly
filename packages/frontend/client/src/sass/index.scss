@@ -1,8 +1,23 @@
 @use './responsive';
 
 // Global variables
+$main: #2A2A2A;
+
+$primary: #3B82F6;
+$secondary-color: #AC63E6;
+$success: #22C55E;
+$danger: #EF4444;
+$pink: #EC4899;
+$warning: #F59E0B;
+$info: #3B82F6;
+$white: #F9F9F9;
+$black: #000;
+$dark: #1E1E1E;
+$gray: #222;
 $main-bg: #ddd;
 $main-color: #222;
+
+$linear-gradient: linear-gradient(135deg, #5813C1, #C45037);
 
 // Global styles
 *,
@@ -11,11 +26,16 @@ $main-color: #222;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Cairo', sans-serif;
 }
 
 
 // Body
 body {
     background: #ddd;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
 }
