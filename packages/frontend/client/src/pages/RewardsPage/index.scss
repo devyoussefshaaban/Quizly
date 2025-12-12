@@ -34,5 +34,19 @@
             margin-top: 2rem;
             text-align: center;
         }
+
+        .result__options {
+            button {
+                display: block;
+                margin: 2rem auto;
+                padding: 1rem;
+                font-weight: 600;
+                border-radius: 5px;
+                background: #3498db;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+        }
     }
 }
