@@ -1,3 +1,10 @@
+import MetaHead from "../../components/shared/MetaHead";
+
 export default function RewardsPage() {
-  return <div>Comming Soon ...</div>;
+  return (
+    <>
+      <MetaHead title="Rewards" description="Rewards page description." />
+      <div>Comming Soon ...</div>
+    </>
+  )
 }

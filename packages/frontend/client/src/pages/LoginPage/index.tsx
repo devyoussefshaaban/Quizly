@@ -1,13 +1,17 @@
 // Components
 import LoginForm from "../../components/LoginForm/LoginForm";
+import MetaHead from "../../components/shared/MetaHead";
 // Styles
 import "./index.scss";
 
 const LoginPage = () => {
   return (
-    <div className="login__screen">
-      <LoginForm />
-    </div>
+    <>
+      <MetaHead title="Login" description="Login page description." />
+      <div className="login__screen">
+        <LoginForm />
+      </div>
+    </>
   );
 };
 

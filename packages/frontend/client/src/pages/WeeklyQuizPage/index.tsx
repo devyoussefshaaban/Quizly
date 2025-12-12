@@ -1,3 +1,10 @@
+import MetaHead from "../../components/shared/MetaHead";
+
 export default function WeeklyQuizPage() {
-    return <div>Commin soon ...</div>;
+    return (
+        <>
+            <MetaHead title="Weekly Quiz" description="Weekly Quiz page description." />
+            <div>Commin soon ...</div>
+        </>
+    )
 }
