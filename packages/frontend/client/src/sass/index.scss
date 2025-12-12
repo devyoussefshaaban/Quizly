@@ -1,0 +1,21 @@
+@use './responsive';
+
+// Global variables
+$main-bg: #ddd;
+$main-color: #222;
+
+// Global styles
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+// Body
+body {
+    background: #ddd;
+}
