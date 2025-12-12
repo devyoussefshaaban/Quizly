@@ -1,0 +1,32 @@
+.redirected__message {
+    margin: auto;
+    display: grid;
+    place-items: center;
+
+    h2 {
+        color: #000;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    &__options {
+
+        button {
+            border: none;
+            outline: none;
+            padding: 1rem;
+            border-radius: 5px;
+            background: #3498db;
+            margin: auto;
+            letter-spacing: 1.6px;
+
+            a {
+                font-size: 1rem;
+                color: #fff;
+                font-weight: 600;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

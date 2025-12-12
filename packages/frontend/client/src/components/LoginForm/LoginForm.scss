@@ -1,0 +1,61 @@
+form {
+    width: 400px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+
+    .input__field {
+        margin-bottom: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        &:last-child {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            // font-size: 1.2rem;
+            font-weight: 600;
+            color: #3498db;
+        }
+
+        input {
+            padding: .5rem;
+            font-size: 1rem;
+            outline: none;
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin-top: .5rem;
+            background: transparent;
+
+            &[type="submit"] {
+                margin: auto;
+                color: #fff;
+                border: none;
+                border-radius: 10px;
+                width: 200px;
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+                cursor: pointer;
+                padding: 1rem;
+                background: #3498db;
+            }
+        }
+
+        span {
+            color: #f00;
+            font-size: .9rem;
+            display: block;
+            margin-top: .5rem;
+        }
+    }
+}
+
+.mui-btn {
+    color: #fff !important;
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    background: #3498db !important;
+}
