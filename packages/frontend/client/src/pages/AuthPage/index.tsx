@@ -1,7 +1,7 @@
 // Components
 import LoginForm from "../../components/LoginForm/LoginForm";
 import MetaHead from "../../components/shared/MetaHead";
-import Logo from "../../assets/images/logo.svg"
+import Logo from "/images/logo.svg"
 import "./index.scss";
 
 const LoginPage = () => {

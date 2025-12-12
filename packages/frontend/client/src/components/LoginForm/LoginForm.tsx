@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../context";
 import { login, logout, userAuth } from "../../context/actions";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./index.scss";
 import {
   User,

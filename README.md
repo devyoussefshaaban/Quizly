@@ -23,3 +23,11 @@ It is built using the latest web technologies and is designed to be easy to use 
 
 - nodemon
 - concurrently
+
+## Contact Info
+
+- [Email](mailto:imdevyoussefshaaban@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/imdevyoussefshaaban/)
+- [Portfolio](https://devyoussefshaaban.vercel.app/)
+- [Mobile](tel:+201026106473)
+- [WhatsApp](https://wa.me/201281534401)

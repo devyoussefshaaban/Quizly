@@ -1,11 +1,11 @@
-import MenuIcon from "../../assets/icons/menu-icon.svg";
-import CloseIcon from "../../assets/icons/close-icon.svg";
+import MenuIcon from "/icons/menu-icon.svg"
+import CloseIcon from "/icons/close-icon.svg";
 import { useState } from "react";
-import Logo from "../../assets/images/logo.svg"
-import Nav from "../Nav";
+import Logo from "/images/logo.svg"
 import { Link } from "react-router-dom";
 
 import "./index.scss";
+import Nav from "../../../Nav";
 
 
 const Header = () => {
