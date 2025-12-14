@@ -5,13 +5,13 @@ import { useSelector } from "react-redux";
 import type { RootState } from "./context";
 import ExamPage from "./pages/QuizPage";
 import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/AuthPage";
 import PrivateRoute from "./routes/PrivateRoute";
 import PublicRoute from "./routes/PublicRoute";
 import RewardsPage from "./pages/RewardsPage";
 import WeeklyQuizPage from "./pages/WeeklyQuizPage";
 import AboutPage from "./pages/AboutPage";
 import MainLayout from "./components/Layout/MainLayout";
+import AuthPage from "./pages/AuthPage";
 
 const App = () => {
   const isAuth = useSelector((state: RootState) => state.main.userAuth);
@@ -27,7 +27,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<PublicRoute><HomePage /></PublicRoute>} />
             <Route path="/about" element={<PublicRoute><AboutPage /></PublicRoute>} />
-            <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
+            <Route path="/auth" element={<PublicRoute><AuthPage /></PublicRoute>} />
             <Route path="/quiz" element={<PrivateRoute><ExamPage /></PrivateRoute>} />
             <Route path="/rewards" element={<PrivateRoute><RewardsPage /></PrivateRoute>} />
             <Route path="/weekly-quiz" element={<PrivateRoute><WeeklyQuizPage /></PrivateRoute>} />

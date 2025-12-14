@@ -1,24 +1,28 @@
 @use '../../sass' as sass;
 
-.login__screen {
+.auth__screen {
     overflow: hidden;
-    height: 100vh;
+    height: 90vh;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        height: 100%;
 
         .grid__item {
-            height: 100vh;
+            height: 100%;
+            overflow: hidden; // Ensure items don't leak
 
             &.logo__container {
                 background-image: url("/images/bg.png");
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
-
                 display: grid;
-
                 place-items: center;
 
                 img {
@@ -29,17 +33,7 @@
 
             &.form__container {
                 background-color: sass.$white;
-
-                form {
-                    width: 50%;
-                    height: 100%;
-                    margin: auto;
-                    border-radius: none;
-                    background-color: sass.$white;
-
-                }
             }
         }
     }
-
 }

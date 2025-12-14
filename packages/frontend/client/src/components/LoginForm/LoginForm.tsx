@@ -16,6 +16,7 @@ import {
   EyeOff,
   Eye
 } from "lucide-react";
+import { WelcomeUser } from "../shared";
 
 const LoginForm = () => {
   const {
@@ -66,49 +67,7 @@ const LoginForm = () => {
     }, 800);
   };
 
-  if (user)
-    return (
-      <div className="login-form__wrapper">
-        <div className="login-form__container login-form__container--logged-in">
-          <div className="login-form__header">
-            <div className="login-form__avatar">
-              {user.name?.charAt(0).toUpperCase() || "U"}
-            </div>
-            <h2>Welcome, {user.name}!</h2>
-            <p className="login-form__user-email">{user.email}</p>
-          </div>
-
-          <div className="login-form__success-card">
-            <CheckCircle size={48} className="success-icon" />
-            <h3>You're already logged in</h3>
-            <p>Would you like to continue to the quiz or logout?</p>
-
-            <div className="login-form__action-buttons">
-              <button
-                className="btn btn--primary"
-                onClick={() => navigate("/quiz")}
-              >
-                Continue to Quiz
-              </button>
-              <button
-                className="btn btn--outline"
-                onClick={logoutHandler}
-                disabled={isLoading}
-              >
-                {isLoading ? (
-                  <Loader2 className="spinner" size={20} />
-                ) : (
-                  <>
-                    <LogOut size={20} />
-                    Logout
-                  </>
-                )}
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
+  if (user) return <WelcomeUser user={user} logoutHandler={logoutHandler} isLoading={isLoading} />
 
   return (
     <div className="login-form__wrapper">
@@ -126,37 +85,6 @@ const LoginForm = () => {
         )}
 
         <form onSubmit={handleSubmit(onSubmit)} className="login-form">
-          <div className={`input__field ${errors.name ? "input__field--error" : ""}`}>
-            <label htmlFor="name" className="input__label">
-              <User size={18} />
-              <span>Full Name</span>
-            </label>
-            <input
-              type="text"
-              id="name"
-              className="input__control"
-              {...register("name", {
-                required: "Name is required",
-                minLength: {
-                  value: 3,
-                  message: "Name must be at least 3 characters"
-                },
-                maxLength: {
-                  value: 30,
-                  message: "Name must not exceed 30 characters"
-                }
-              })}
-              placeholder="Enter your full name"
-              disabled={isSubmitting}
-            />
-            {errors.name && (
-              <span className="input__error">
-                <AlertCircle size={14} />
-                {errors.name.message as string}
-              </span>
-            )}
-          </div>
-
           <div className={`input__field ${errors.email ? "input__field--error" : ""}`}>
             <label htmlFor="email" className="input__label">
               <Mail size={18} />
@@ -242,6 +170,10 @@ const LoginForm = () => {
               "Sign In"
             )}
           </button>
+
+          <div className="login-form__register">
+            Don't have an account? <a href="#" onClick={() => navigate("/auth?type=register")}>Sign Up</a>
+          </div>
 
           <div className="login-form__footer">
             <p className="login-form__disclaimer">

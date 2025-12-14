@@ -1,14 +1,19 @@
-// Action types
 import * as actionTypes from "./actionTypes";
 
-// Action creators
-// login
 export const login = (userData: User): Action => {
   return {
     type: actionTypes.LOGIN,
     payload: userData,
   };
 };
+
+export const register = (userData: User): Action => {
+  return {
+    type: actionTypes.REGISTER,
+    payload: userData,
+  };
+};
+
 
 // logout
 export const logout = (): Action => {

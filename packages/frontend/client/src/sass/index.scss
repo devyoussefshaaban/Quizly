@@ -13,9 +13,10 @@ $info: #3B82F6;
 $white: #F9F9F9;
 $black: #000;
 $dark: #1E1E1E;
-$gray: #222;
+$gray: #667085;
 $main-bg: #ddd;
 $main-color: #222;
+$btn-bg: #9823F5;
 
 $linear-gradient: linear-gradient(135deg, #5813C1, #C45037);
 
@@ -32,7 +33,7 @@ $linear-gradient: linear-gradient(135deg, #5813C1, #C45037);
 
 // Body
 body {
-    background: #ddd;
+    background: $white;
 }
 
 a {
