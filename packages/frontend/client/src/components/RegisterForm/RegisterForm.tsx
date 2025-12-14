@@ -9,9 +9,7 @@ import {
   User,
   Mail,
   Lock,
-  LogOut,
   Loader2,
-  CheckCircle,
   AlertCircle,
   EyeOff,
   Eye

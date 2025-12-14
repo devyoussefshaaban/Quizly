@@ -6,12 +6,9 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./index.scss";
 import {
-  User,
   Mail,
   Lock,
-  LogOut,
   Loader2,
-  CheckCircle,
   AlertCircle,
   EyeOff,
   Eye
