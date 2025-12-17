@@ -1,7 +1,4 @@
 import { useForm } from "react-hook-form";
-import { useDispatch, useSelector } from "react-redux";
-import type { RootState } from "../../context";
-import { logout, userAuth, register as registerUser } from "../../context/actions";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./index.scss";
@@ -14,9 +11,6 @@ import {
   EyeOff,
   Eye
 } from "lucide-react";
-import { WelcomeUser } from "../shared";
-
-
 
 const RegisterForm = () => {
   const {
@@ -30,14 +24,8 @@ const RegisterForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [registerError, setregisterError] = useState<string | null>(null);
 
-  const user = useSelector((state: RootState) => state.main.user);
-  const isLoading = useSelector((state: RootState) => state.main.isLoading);
-
-  const dispatch = useDispatch();
-
   const onSubmit = async (data: any) => {
     setregisterError(null);
-    dispatch(userAuth(false));
 
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -46,28 +34,15 @@ const RegisterForm = () => {
         throw new Error("Invalid credentials. Please try again.");
       }
 
-      dispatch(registerUser(data));
 
       setTimeout(() => {
         navigate("/quiz");
-        dispatch(userAuth(true));
         reset({ name: null, email: null, password: null });
       }, 1500);
     } catch (error) {
       setregisterError(error instanceof Error ? error.message : "register failed. Please try again.");
-      dispatch(userAuth(true));
     }
   };
-
-  const logoutHandler = () => {
-    dispatch(userAuth(false));
-    setTimeout(() => {
-      dispatch(logout());
-      dispatch(userAuth(true));
-    }, 800);
-  };
-
-  if (user) return <WelcomeUser user={user} logoutHandler={logoutHandler} isLoading={isLoading} />
 
   return (
     <div className="register-form__wrapper">

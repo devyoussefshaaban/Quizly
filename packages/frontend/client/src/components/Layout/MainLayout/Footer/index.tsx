@@ -4,7 +4,7 @@ import "./index.scss"
 const SocialLink = ({ href, icon }: { href: string, icon: string }) => {
     return (
         <a href={href} target="_blank">
-            <img style={{ width: 20, height: 20 }} src={icon} className="mx-auto text-white" alt="Logo" />
+            <img style={{ width: 15, height: 15 }} src={icon} className="mx-auto text-white" alt="Logo" />
         </a>
     )
 }
